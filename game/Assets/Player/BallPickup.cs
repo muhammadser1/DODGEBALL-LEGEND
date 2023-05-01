@@ -6,7 +6,7 @@ public class BallPickup : MonoBehaviour
 
 
     public GameObject text;
-
+    public GameObject text2;
 
     public GameObject ball;
     public Transform parent;
@@ -23,7 +23,7 @@ public class BallPickup : MonoBehaviour
     void Start()
     {
         text.SetActive(false);
-       
+        text2.SetActive(false);
 
 
 
@@ -34,10 +34,18 @@ public class BallPickup : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector3.Distance(ball.transform.position, parent.position);
-        if(distance < 2f)
+        if (isEquipped)
+            text2.SetActive(true);
+            text.SetActive(false);
+        }
+            float distance = Vector3.Distance(ball.transform.position, parent.position);
+        if (distance < 2f)
         {
-          text.SetActive(true);
+            if (!isEquipped)
+            {
+                text.SetActive(true);
+                text2.SetActive(false);
+            }
         }
         else
         {
@@ -55,9 +63,12 @@ public class BallPickup : MonoBehaviour
                     ball.transform.parent = parent;
                     ball.transform.localPosition = Vector3.zero;
                     ballRigidbody.isKinematic = true;
+                    text.SetActive(false);
                     isEquipped = true;
                 }
+
             }
+           
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {
