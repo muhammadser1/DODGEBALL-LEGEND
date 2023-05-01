@@ -35,6 +35,7 @@ public class BallPickup : MonoBehaviour
     private void Update()
     {
         if (isEquipped)
+        {
             text2.SetActive(true);
             text.SetActive(false);
         }
