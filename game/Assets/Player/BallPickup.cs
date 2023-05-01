@@ -1,15 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BallPickup : MonoBehaviour
 {
+
+
+
+    public GameObject text;
+
+
     public GameObject ball;
     public Transform parent;
     public float pickupDistanceThreshold = 1f;
     public float throwForce = 20f;
     public float throwDistance = 10f;
-    public float throwHeight = 0f; // added variable to set throw height
+    public float throwHeight = 1f; // added variable to set throw height
     public float gravity = -9.81f; // added variable to set gravity value
     public Camera cameraObject; // assign this in the inspector
 
@@ -18,17 +22,34 @@ public class BallPickup : MonoBehaviour
 
     void Start()
     {
+        text.SetActive(false);
+       
+
+
+
+
         ballRigidbody = ball.GetComponent<Rigidbody>();
         ballRigidbody.isKinematic = true;
     }
 
     private void Update()
     {
+        float distance = Vector3.Distance(ball.transform.position, parent.position);
+        if(distance < 2f)
+        {
+          text.SetActive(true);
+        }
+        else
+        {
+            text.SetActive(false);
+        }
+
         if (Input.GetKeyDown(KeyCode.F))
         {
+
             if (!isEquipped)
             {
-                float distance = Vector3.Distance(ball.transform.position, parent.position);
+               // float distance = Vector3.Distance(ball.transform.position, parent.position);
                 if (distance < pickupDistanceThreshold)
                 {
                     ball.transform.parent = parent;
