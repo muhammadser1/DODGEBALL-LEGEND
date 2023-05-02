@@ -8,12 +8,15 @@ public class PlayerHealth : MonoBehaviour
 {
     int hp1 = 0;
     public Slider healthSlider;
-    private int health = 100;
+    private float health = 100;
+    public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
+
     void Start()
     {
         // Set the initial value of the health slider to 100
         healthSlider.value = health;
     }
+
     void Update()
     {
         // Check for jump input and decrease health by 10
@@ -23,12 +26,26 @@ public class PlayerHealth : MonoBehaviour
             healthSlider.value = health;
         }
 
+        // Check if an enemy is close and decrease health by 10 if there is
+        Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDetectionRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                health -= 0.1f;
+                healthSlider.value = health;
+                break;
+            }
+        }
+
         // Check if health has reached 0 and restart game if it has
         if (health <= 0)
         {
             // Restart the game (replace this with your own restart logic)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        // Check if player has touched a health pickup
         if (hp1 == 0)
         {
             if (transform.position.x >= -5 && transform.position.x <= -4)
