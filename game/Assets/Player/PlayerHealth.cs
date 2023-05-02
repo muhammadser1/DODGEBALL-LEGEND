@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDetectionRadius);
         foreach (Collider collider in colliders)
         {
-            if (collider.CompareTag("Enemy"))
+            if (collider.CompareTag("Enemylevel0"))
             {
                 health -= 0.1f;
                 healthSlider.value = health;

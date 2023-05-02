@@ -16,15 +16,28 @@ void Start()
     // Update is called once per frame
     void Update()
     {
-        
+       if(health<=0)
+        {
+            GameObject obj = GameObject.Find("door0");
+
+            if (obj != null)
+            {
+                Destroy(obj);
+            }
+        }
     }
 void OnCollisionEnter(Collision other)
 {
    
     if (other.gameObject.name == "ball0")
     {
-        health -= 10;
+        health -= 20;
         healthSlider.value = health;
     }
-}
+        if (other.gameObject.name == "ball01")
+        {
+            health -= 10;
+            healthSlider.value = health;
+        }
+    }
 }

@@ -348,6 +348,7 @@
 "Assets/Enemy/blueHP.cs"
 "Assets/Enemy/EnemyMovement.cs"
 "Assets/Player/BallPickup.cs"
+"Assets/Player/BallPickup01.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Player/PlayerMovement.cs"
 "Assets/Scenes/Menu.cs"
