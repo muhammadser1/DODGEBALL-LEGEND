@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -41,8 +42,11 @@ public class PlayerHealth : MonoBehaviour
         // Check if health has reached 0 and restart game if it has
         if (health <= 0)
         {
-            // Restart the game (replace this with your own restart logic)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(2);
+            // This line loads the scene
+
         }
 
         // Check if player has touched a health pickup
