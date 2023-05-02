@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMovement : MonoBehaviour
 {
     public bool dis = false;
 
-
+    public GameObject text;
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20f;
@@ -83,7 +84,10 @@ public class PlayerMovement : MonoBehaviour
                     isDashing = false;
                 }
             }
-
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                text.SetActive(false);
+            }
             moveDirection.y -= gravity * Time.deltaTime;
 
             if (isDucking)

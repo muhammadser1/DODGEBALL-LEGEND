@@ -9,6 +9,7 @@ TagManager:
   - Enemylevel0
   - 19.62
   - ball01
+  - ball02
   layers:
   - Default
   - TransparentFX
