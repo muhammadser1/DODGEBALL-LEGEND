@@ -43,3 +43,7 @@ Total hours: 8.5
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%205.gif)
 
 
+## Week 6:
+I added several features to the game, including a practice room, two new rooms, balls, enemies, very easy quizzes, and a health system. (summary).
+
+https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4
