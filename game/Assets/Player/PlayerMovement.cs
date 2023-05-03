@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour
 {
     public bool dis = false;
-
     public GameObject text;
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
@@ -15,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashDuration = 0.2f;
     public float crouchHeight = 1.0f;
     public float standHeight = 2.0f;
+    public float extraJumpForce = 5.0f; // extra force added to jump when player hits the box
 
     public float mouseSensitivity = 100.0f;
     public Transform cameraTransform;
@@ -34,22 +33,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {/*
-        if (transform.position.x > 150f && transform.position.x < 220f)
-        {
-            if (transform.position.z > 0f && transform.position.z < 70f)
-            {
-                gravity = 10f;
-            }
-
-
-        }
-        else
-        {
-            gravity = 20f;
-
-        }*/
-
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         bool isJumping = Input.GetButtonDown("Jump");
@@ -84,10 +68,29 @@ public class PlayerMovement : MonoBehaviour
                     isDashing = false;
                 }
             }
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 text.SetActive(false);
             }
+
+            // add extra jump force when player hits the box
+            if (controller.isGrounded && Input.GetKeyDown(KeyCode.E))
+            {
+                if (transform.position.x > 30f && transform.position.x < 32f)
+                {
+                    if (transform.position.z > 16f && transform.position.z < 18f)
+                    {
+                        GameObject obj0 = GameObject.Find("Enemylevel0");
+                        if (obj0 == null)
+                        {
+                            moveDirection.y = jumpSpeed + extraJumpForce;
+                        }
+                    }
+                }
+                      
+            }
+
             moveDirection.y -= gravity * Time.deltaTime;
 
             if (isDucking)
@@ -121,5 +124,4 @@ public class PlayerMovement : MonoBehaviour
             cameraTransform.localRotation = Quaternion.Euler(xRotation, 0.0f, 0.0f);
         }
     }
-
 }
