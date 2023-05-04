@@ -52,4 +52,4 @@ Total hours: 8.5
 6. Implement a health system where the player's health decreases if they get hit by a ball
 
 
-https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4
+https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4                                                                                Total hour: 7.5 
