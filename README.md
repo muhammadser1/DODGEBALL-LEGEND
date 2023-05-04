@@ -44,12 +44,12 @@ Total hours: 8.5
 
 
 ## Week 6:
-Create more rooms.
-Create a practice room with three targets that the player must hit with balls to progress to room 2.
-Add two different types of balls, each with unique properties.
-Create very easy quizzes to allow the player to progress from one room to another.
-Add a restart and win menu, where the player wins the game by killing all the enemies, and the win menu appears.
-Implement a health system where the player's health decreases if they get hit by a ball
+1. Create more rooms.
+2. Create a practice room with three targets that the player must hit with balls to progress to room 2.
+3. Add two different types of balls, each with unique properties.
+4. Create very easy quizzes to allow the player to progress from one room to another.
+5. Add a restart and win menu, where the player wins the game by killing all the enemies, and the win menu appears.
+6. Implement a health system where the player's health decreases if they get hit by a ball
 
 
 https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4
