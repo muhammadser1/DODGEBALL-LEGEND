@@ -39,7 +39,7 @@ public class BallPickup : MonoBehaviour
             text2.SetActive(true);
             text.SetActive(false);
         }
-            float distance = Vector3.Distance(ball.transform.position, parent.position);
+        float distance = Vector3.Distance(ball.transform.position, parent.position);
         if (distance < 2f)
         {
             if (!isEquipped)
@@ -58,7 +58,7 @@ public class BallPickup : MonoBehaviour
 
             if (!isEquipped)
             {
-               // float distance = Vector3.Distance(ball.transform.position, parent.position);
+                // float distance = Vector3.Distance(ball.transform.position, parent.position);
                 if (distance < pickupDistanceThreshold)
                 {
                     ball.transform.parent = parent;
@@ -69,7 +69,7 @@ public class BallPickup : MonoBehaviour
                 }
 
             }
-           
+
         }
         else if (Input.GetKeyDown(KeyCode.G))
         {

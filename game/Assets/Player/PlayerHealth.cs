@@ -37,6 +37,12 @@ public class PlayerHealth : MonoBehaviour
                 healthSlider.value = health;
                 break;
             }
+            if (collider.CompareTag("Enemylevel2"))
+            {
+                health -= 0.2f;
+                healthSlider.value = health;
+                break;
+            }
         }
 
         // Check if health has reached 0 and restart game if it has
@@ -72,4 +78,25 @@ public class PlayerHealth : MonoBehaviour
             }
         }
     }
+    
+    void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.name == "ball0")
+        {
+            health -= 40;
+            healthSlider.value = health;
+        }
+        if (other.gameObject.name == "ball01")
+        {
+            health -= 20;
+            healthSlider.value = health;
+        }
+        if (other.gameObject.name == "ball02")
+        {
+            health -= 30;
+            healthSlider.value = health;
+        }
+    }
+
 }

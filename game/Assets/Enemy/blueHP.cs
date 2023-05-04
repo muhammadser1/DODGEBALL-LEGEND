@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class blueHP : MonoBehaviour
 {
     public Slider healthSlider;
-   // public Slider healthSlider2;
+    public GameObject healthBar;
+    public GameObject healthBar2;
     private int health = 100;
     int x = 0;
 
@@ -17,14 +18,18 @@ public class blueHP : MonoBehaviour
 
     void Start()
     {
-    healthSlider.value = health;
+        healthBar.SetActive(false);
+        healthBar2.SetActive(false);
+
+        healthSlider.value = health;
 }
     void Update()
     {
 
         if (health<=0)// && !hasDivided)
         {
-
+            healthBar.SetActive(true);
+            healthBar2.SetActive(true);
             //  GameObject enemy1 = Instantiate(smallerEnemyPrefab, transform.position + new Vector3(-0.5f, 0, 0), Quaternion.identity);
             // GameObject enemy2 = Instantiate(smallerEnemyPrefab, transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity);
             // hasDivided = true;
@@ -41,17 +46,17 @@ void OnCollisionEnter(Collision other)
    
     if (other.gameObject.name == "ball0")
     {
-        health -= 40;
+        health -= 100;
         healthSlider.value = health;
     }
         if (other.gameObject.name == "ball01")
         {
-            health -= 20;
+            health -= 100;
             healthSlider.value = health;
         }
         if (other.gameObject.name == "ball02")
         {
-            health -= 30;
+            health -= 100;
             healthSlider.value = health;
         }
     }
