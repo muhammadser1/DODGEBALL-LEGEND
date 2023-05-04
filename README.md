@@ -51,5 +51,6 @@ Total hours: 8.5
 5. Add a restart and win menu, where the player wins the game by killing all the enemies, and the win menu appears.
 6. Implement a health system where the player's health decreases if they get hit by a ball
 
+Total hour: 7.5 
 
-https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4                                                                                Total hour: 7.5 
+https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4                                                                      
