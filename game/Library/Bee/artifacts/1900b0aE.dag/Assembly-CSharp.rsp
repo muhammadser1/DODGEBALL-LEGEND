@@ -349,6 +349,7 @@
 "Assets/Enemy/EnemyMovement.cs"
 "Assets/Enemy/EnemyMovement2.cs"
 "Assets/Enemy/EnemyMovement22.cs"
+"Assets/Enemy/Test.cs"
 "Assets/Enemy/yellowHP.cs"
 "Assets/others/door0.cs"
 "Assets/others/test1.cs"
