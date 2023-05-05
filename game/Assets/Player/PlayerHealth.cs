@@ -43,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
                 healthSlider.value = health;
                 break;
             }
+           
         }
 
         // Check if health has reached 0 and restart game if it has
@@ -93,6 +94,12 @@ public class PlayerHealth : MonoBehaviour
             healthSlider.value = health;
         }
         if (other.gameObject.name == "ball02")
+        {
+            health -= 30;
+            healthSlider.value = health;
+        }
+
+        if (other.gameObject.name == "Enemy_ball0")
         {
             health -= 30;
             healthSlider.value = health;
