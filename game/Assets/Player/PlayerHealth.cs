@@ -101,7 +101,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.name == "Enemy_ball0")
         {
-            health -= 30;
+            health -= 10;
             healthSlider.value = health;
         }
     }
