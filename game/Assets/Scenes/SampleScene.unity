@@ -2173,7 +2173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  lifetime: 5
+  lifetime: 10
   enemy: {fileID: 1039613583}
 --- !u!1 &343979807
 GameObject:
