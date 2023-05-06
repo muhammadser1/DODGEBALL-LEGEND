@@ -46,17 +46,17 @@ void OnCollisionEnter(Collision other)
    
     if (other.gameObject.name == "ball0")
     {
-        health -= 100;
+        health -= 30;
         healthSlider.value = health;
     }
         if (other.gameObject.name == "ball01")
         {
-            health -= 100;
+            health -= 30;
             healthSlider.value = health;
         }
         if (other.gameObject.name == "ball02")
-        {
-            health -= 100;
+        { 
+            health -= 40;
             healthSlider.value = health;
         }
     }

@@ -20,6 +20,18 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x >= 30 && transform.position.x <= 32)
+        {
+            if (transform.position.y >= 0 && transform.position.y <= 2)
+            {
+                if (transform.position.z >= 0 && transform.position.z <= 2)
+                {
+                    health += 0.01f;
+                    healthSlider.value = health;
+                   
+                }
+            }
+        }
         // Check for jump input and decrease health by 10
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -101,7 +113,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.name == "Enemy_ball0")
         {
-            health -= 10;
+            health -= 4;
             healthSlider.value = health;
         }
     }
