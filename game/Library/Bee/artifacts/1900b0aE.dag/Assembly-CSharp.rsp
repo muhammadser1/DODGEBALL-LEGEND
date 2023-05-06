@@ -362,6 +362,7 @@
 "Assets/Player/PlayerController.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Player/PlayerMovement.cs"
+"Assets/room 0/targetroom0.cs"
 "Assets/Scenes/Menu.cs"
 -langversion:9.0
 
