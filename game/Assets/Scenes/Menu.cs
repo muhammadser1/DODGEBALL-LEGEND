@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     }
     public void OpenURL()
     {
-        UnityEngine.Application.OpenURL("www.youtube.com");
+        UnityEngine.Application.OpenURL("https://github.com/muhammadser1/DODGEBALL-LEGEND");
 
 
     }
