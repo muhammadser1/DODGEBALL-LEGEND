@@ -54,3 +54,13 @@ Total hours: 8.5
 Total hour: 7.5 
 
 https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4                                                                      
+
+
+## Week 7:
+1. Make one enemy that throws a ball: 1.5 hours.
+2. Update the bug related to the healthy bar: 0.5 hours.
+3. Make the enemy's ball follow the player: 2 hours.
+4. Make the targets in room 0 move left and right: 1 hours.
+5. Create a new, larger room 2 with additional obstacles: 3 hours.
+
+Total hours: 8 

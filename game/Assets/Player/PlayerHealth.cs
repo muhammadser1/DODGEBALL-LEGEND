@@ -8,6 +8,8 @@ using static System.Net.Mime.MediaTypeNames;
 public class PlayerHealth : MonoBehaviour
 {
     int hp1 = 0;
+    int hp2 = 0;
+    int hp3 = 0;
     public Slider healthSlider;
     private float health = 100;
     public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
@@ -90,8 +92,53 @@ public class PlayerHealth : MonoBehaviour
                 }
             }
         }
+        if (hp2 == 0)
+        {
+            if (transform.position.x >= 76 && transform.position.x <= 78)
+            {
+                if (transform.position.y >= 0 && transform.position.y <= 3)
+                {
+                    if (transform.position.z >= -9 && transform.position.z <= -7)
+                    {
+                        health += 10;
+                        healthSlider.value = health;
+                       
+                        GameObject obj2 = GameObject.Find("Cube (100)");
+
+                        if (obj2 != null)
+                        {
+                            hp2++;
+                            Destroy(obj2);
+                        }
+                    }
+                }
+            }
+        }
+        if (hp3 == 0)
+        {
+            if (transform.position.x >= 62 && transform.position.x <= 64)
+            {
+                if (transform.position.y >= 1 && transform.position.y <= 4)
+                {
+                    if (transform.position.z >= 11 && transform.position.z <= 13)
+                    {
+                        health += 10;
+                        healthSlider.value = health;
+
+                        GameObject obj3 = GameObject.Find("Cube (101)");
+
+                        if (obj3 != null)
+                        {
+                            hp3++;
+                            Destroy(obj3);
+                        }
+                    }
+                }
+            }
+        }
+
     }
-    
+
     void OnCollisionEnter(Collision other)
     {
 
