@@ -62,5 +62,13 @@ https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary
 3. Make the enemy's ball follow the player: 2 hours.
 4. Make the targets in room 0 move left and right: 1 hours.
 5. Create a new, larger room 2 with additional obstacles: 3 hours.
+6. Adding a healing zone 0.5 hours.
+Total hours: 8.5
 
-Total hours: 8 
+## Room 0 (After Week 7):
+
+![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%207(Making%20the%20enemy%20throw%20balls)/Rooms/Room_0%20%20.gif)
+
+## Room 1 (After Week 7):
+
+![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%207(Making%20the%20enemy%20throw%20balls)/Rooms/Room_1.gif)
