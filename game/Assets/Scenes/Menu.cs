@@ -13,6 +13,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
                                 
     }
+    public void instructions()
+    {
+        SceneManager.LoadScene("Menu 3");
+
+    }
     public void Quit()
     {
         UnityEngine.Debug.Log("QUIT!");

@@ -364,6 +364,9 @@
 "Assets/Player/PlayerMovement.cs"
 "Assets/room 0/targetroom0.cs"
 "Assets/Scenes/Menu.cs"
+"Assets/Scenes/Menu3.cs"
+"Assets/Scenes/Menu4.cs"
+"Assets/Scenes/Menu5.cs"
 -langversion:9.0
 
 /deterministic
