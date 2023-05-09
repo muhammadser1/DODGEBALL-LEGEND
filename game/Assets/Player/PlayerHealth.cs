@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     int hp1 = 0;
     int hp2 = 0;
     int hp3 = 0;
+    int hp4 = 0;
     public Slider healthSlider;
     private float health = 100;
     public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
@@ -35,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
             }
         }
         // Check for jump input and decrease health by 10
-   /*     if (Input.GetKeyDown(KeyCode.Space))
+      /* if (Input.GetKeyDown(KeyCode.Space))
         {
             health -= 10;
             healthSlider.value = health;
@@ -83,6 +84,27 @@ public class PlayerHealth : MonoBehaviour
                         healthSlider.value = health;
                         hp1++;
                         GameObject obj = GameObject.Find("Cube (6)");
+
+                        if (obj != null)
+                        {
+                            Destroy(obj);
+                        }
+                    }
+                }
+            }
+        }
+        if (hp4 == 0)
+        {
+            if (transform.position.x >= 75 && transform.position.x <= 77)
+            {
+                if (transform.position.y >= 2 && transform.position.y <= 3)
+                {
+                    if (transform.position.z >= 26 && transform.position.z <= 29)
+                    {
+                        health += 10;
+                        healthSlider.value = health;
+                        hp4++;
+                        GameObject obj = GameObject.Find("Cube (1002)");
 
                         if (obj != null)
                         {
