@@ -4,6 +4,7 @@ public class BallPickup01 : MonoBehaviour
 {
 
 
+    private oneball script2;
 
     public GameObject text;
     public GameObject text2;
@@ -25,7 +26,7 @@ public class BallPickup01 : MonoBehaviour
         text.SetActive(false);
         text2.SetActive(false);
 
-
+        script2 = GetComponent<oneball>();
 
 
         ballRigidbody = ball.GetComponent<Rigidbody>();
@@ -56,11 +57,12 @@ public class BallPickup01 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
 
-            if (!isEquipped)
+            if (!isEquipped && script2.flag == 0)
             {
                 // float distance = Vector3.Distance(ball.transform.position, parent.position);
                 if (distance < pickupDistanceThreshold)
                 {
+                    script2.flag = 1;
                     ball.transform.parent = parent;
                     ball.transform.localPosition = Vector3.zero;
                     ballRigidbody.isKinematic = true;
@@ -81,7 +83,7 @@ public class BallPickup01 : MonoBehaviour
                 throwDirection.y = 0f; // set y component to 0
                 throwDirection = throwDirection.normalized;
                 Vector3 throwPosition = cameraObject.transform.position + throwDirection * throwDistance;
-
+                script2.flag = 0;
                 // added code to set the ball's trajectory with a curve
                 float throwDuration = throwDistance / throwForce;
                 Vector3 throwVelocity = throwDirection * throwForce;

@@ -35,11 +35,11 @@ public class PlayerHealth : MonoBehaviour
             }
         }
         // Check for jump input and decrease health by 10
-        if (Input.GetKeyDown(KeyCode.Space))
+   /*     if (Input.GetKeyDown(KeyCode.Space))
         {
             health -= 10;
             healthSlider.value = health;
-        }
+        }*/
 
         // Check if an enemy is close and decrease health by 10 if there is
         Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDetectionRadius);
@@ -144,7 +144,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (other.gameObject.name == "ball0")
         {
-            health -= 40;
+            health -= 20;
             healthSlider.value = health;
         }
         if (other.gameObject.name == "ball01")

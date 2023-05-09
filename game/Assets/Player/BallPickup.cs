@@ -1,13 +1,10 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class BallPickup : MonoBehaviour
 {
 
-
-
-    public GameObject text;
-    public GameObject text2;
-
+    private oneball script2;
     public GameObject ball;
     public Transform parent;
     public float pickupDistanceThreshold = 1f;
@@ -22,11 +19,8 @@ public class BallPickup : MonoBehaviour
 
     void Start()
     {
-        text.SetActive(false);
-        text2.SetActive(false);
 
-
-
+        script2 = GetComponent<oneball>();
 
         ballRigidbody = ball.GetComponent<Rigidbody>();
         ballRigidbody.isKinematic = true;
@@ -34,29 +28,29 @@ public class BallPickup : MonoBehaviour
 
     private void Update()
     {
+        
+
         if (isEquipped)
         {
-            text2.SetActive(true);
-            text.SetActive(false);
+
         }
         float distance = Vector3.Distance(ball.transform.position, parent.position);
         if (distance < 2f)
         {
             if (!isEquipped)
             {
-                text.SetActive(true);
-                text2.SetActive(false);
+
             }
         }
         else
         {
-            text.SetActive(false);
+
         }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
 
-            if (!isEquipped)
+            if (!isEquipped && script2.flag==0)
             {
                 // float distance = Vector3.Distance(ball.transform.position, parent.position);
                 if (distance < pickupDistanceThreshold)
@@ -64,8 +58,8 @@ public class BallPickup : MonoBehaviour
                     ball.transform.parent = parent;
                     ball.transform.localPosition = Vector3.zero;
                     ballRigidbody.isKinematic = true;
-                    text.SetActive(false);
                     isEquipped = true;
+                    script2.flag = 1;
                 }
 
             }
@@ -75,6 +69,7 @@ public class BallPickup : MonoBehaviour
         {
             if (isEquipped)
             {
+                script2.flag = 0;
                 ball.transform.parent = null;
                 ballRigidbody.isKinematic = false;
                 Vector3 throwDirection = cameraObject.transform.forward;

@@ -358,7 +358,7 @@
 "Assets/others/WIN.cs"
 "Assets/Player/BallPickup.cs"
 "Assets/Player/BallPickup01.cs"
-"Assets/Player/BallPickup02.cs"
+"Assets/Player/oneball.cs"
 "Assets/Player/PlayerController.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Player/PlayerMovement.cs"
