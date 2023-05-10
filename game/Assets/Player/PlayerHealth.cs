@@ -58,7 +58,18 @@ public class PlayerHealth : MonoBehaviour
                 healthSlider.value = health;
                 break;
             }
-           
+            if (collider.CompareTag("enemy1"))
+            {
+                health -= 0.1f;
+                healthSlider.value = health;
+                break;
+            }
+            if (collider.CompareTag("enemy3"))
+            {
+                health -= 0.1f;
+                healthSlider.value = health;
+                break;
+            }
         }
 
         // Check if health has reached 0 and restart game if it has
@@ -181,6 +192,16 @@ public class PlayerHealth : MonoBehaviour
         }
 
         if (other.gameObject.name == "Enemy_ball0")
+        {
+            health -= 4;
+            healthSlider.value = health;
+        }
+        if (other.gameObject.name == "enemyball1")
+        {
+            health -= 4;
+            healthSlider.value = health;
+        }
+        if (other.gameObject.name == "enemyball22")
         {
             health -= 4;
             healthSlider.value = health;

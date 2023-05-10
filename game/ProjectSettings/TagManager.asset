@@ -12,6 +12,11 @@ TagManager:
   - ball02
   - Ground
   - Enemylevel2
+  - enemy1
+  - enemy2
+  - enemyball1
+  - enemy3
+  - enemyball22
   layers:
   - Default
   - TransparentFX
