@@ -72,3 +72,9 @@ Total hours: 8.5
 ## Room 1 (After Week 7):
 
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%207(Making%20the%20enemy%20throw%20balls)/Rooms/Room_1.gif)
+
+
+## Week 8 :
+This week, I added an instructions menu and updated the code so that the player can only pick up one ball at a time. I also added some new balls and three enemies to Room 2. Additionally, I created videos of my game. Finally, I finished developing my game, although it does not include portals.
+
+Total Hours: 4.5
