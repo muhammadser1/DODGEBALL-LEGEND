@@ -85,3 +85,8 @@ Total Hours: 4.5
 ## The Second 
 
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%208%20(finish%20game%20without%20Portals)/22.gif)
+
+## Week 9:
+
+I learned from YouTube and Google tutorials for a total of 7 hours. Additionally, I spent 0.5 hours learning ProBuilder as it makes map creation easier.
+Total Hours: 7.5
