@@ -95,4 +95,4 @@ Total Hours: 7.5
 
 1. Make two boxes and place them on the wall by clicking the right and left mouse buttons. The boxes should be positioned very close to the wall, almost touching it.
 
-![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week 10(1).gif)
+![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%2010(1).gif)
