@@ -90,3 +90,9 @@ Total Hours: 4.5
 
 I learned from YouTube and Google tutorials for a total of 7 hours. Additionally, I spent 0.5 hours learning ProBuilder as it makes map creation easier.
 Total Hours: 7.5
+
+## Week 10:
+
+1. Make two boxes and place them on the wall by clicking the right and left mouse buttons. The boxes should be positioned very close to the wall, almost touching it.
+
+![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week 10(1).gif)
