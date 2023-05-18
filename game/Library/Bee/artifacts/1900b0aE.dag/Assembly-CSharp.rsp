@@ -370,6 +370,18 @@
 "Assets/Scenes/Menu3.cs"
 "Assets/Scenes/Menu4.cs"
 "Assets/Scenes/Menu5.cs"
+"Assets/test/BasicPortalCamera.cs"
+"Assets/test/CameraMove.cs"
+"Assets/test/Player/pick0.cs"
+"Assets/test/Player/pick1.cs"
+"Assets/test/PlayerController2.cs"
+"Assets/test/Portal.cs"
+"Assets/test/PortalableObject.cs"
+"Assets/test/PortalPair.cs"
+"Assets/test/PortalPlacement.cs"
+"Assets/test/targets/door00.cs"
+"Assets/test/targets/target1.cs"
+"Assets/test/targets/target3.cs"
 -langversion:9.0
 
 /deterministic
