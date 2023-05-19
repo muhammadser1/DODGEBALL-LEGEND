@@ -77,7 +77,7 @@ Total hours: 8.5
 ## Week 8 :
 This week, I added an instructions menu and updated the code so that the player can only pick up one ball at a time. I also added some new balls and three enemies to Room 2. Additionally, I created videos of my game. Finally, I finished developing my game, although it does not include portals.
 
-Total Hours: 4.5
+Total Hours: 6.5
 
 ## First Try
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%208%20(finish%20game%20without%20Portals)/11.gif)
@@ -93,6 +93,15 @@ Total Hours: 7.5
 
 ## Week 10:
 
-1. Make two boxes and place them on the wall by clicking the right and left mouse buttons. The boxes should be positioned very close to the wall, almost touching it.
+1. Make two boxes and place them on the wall by clicking the right and left mouse buttons. The boxes should be positioned very close to the wall, almost touching it. (2 hour)
 
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%2010(1).gif)
+
+2. Before, I used a separate script called pickball for each ball. Now, I am using tags instead of names, and only two scripts are needed. 
+(1 hour)
+
+3. build my Maze using ProBuilder (1 hour).
+
+4. import tutorial code and update the code to new version and fix some bugs and choose just related code ...( 4 hour)
+
+Total Hours: 9
