@@ -17,11 +17,13 @@ TagManager:
   - enemyball1
   - enemy3
   - enemyball22
+  - Portal
+  - Bottle_Health (1)
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - greenwall
   - Water
   - UI
   - 

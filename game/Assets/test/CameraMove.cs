@@ -24,12 +24,13 @@ public class CameraMove : MonoBehaviour
     }
     private void Update()
     {
-        if (transform.position.y >= 1)
+        if (transform.position.y !=1)
         {
             Vector3 newPosition = transform.position;
-            newPosition.y = 1;
+            newPosition.y =1;
             transform.position = newPosition;
         }
+
         // Rotate the camera.
         var rotation = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
         var targetEuler = TargetRotation.eulerAngles + (Vector3)rotation * cameraSpeed;
