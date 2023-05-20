@@ -376,6 +376,8 @@
 "Assets/Scenes/Menu5.cs"
 "Assets/test/BasicPortalCamera.cs"
 "Assets/test/CameraMove.cs"
+"Assets/test/enemy/chasing.cs"
+"Assets/test/enemy/redenemyhp.cs"
 "Assets/test/Player/HPPlayer.cs"
 "Assets/test/Player/pick0.cs"
 "Assets/test/Player/pick1.cs"

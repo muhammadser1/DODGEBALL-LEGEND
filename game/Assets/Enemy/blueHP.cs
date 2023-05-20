@@ -40,10 +40,6 @@ void OnCollisionEnter(Collision other)
             currentHealth -= 60;
             healthSlider.value = currentHealth;
         }
-        if (other.gameObject.name == "ball02")
-        {
-            currentHealth -= 60;
-            healthSlider.value = currentHealth;
-        }
+      
     }
 }

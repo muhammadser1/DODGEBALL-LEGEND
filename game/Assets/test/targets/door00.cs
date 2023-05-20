@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class door00 : MonoBehaviour
 {
-
+    public Slider healthSlider;
     void Start()
     {
+        healthSlider.gameObject.SetActive(false); // to show the slider
 
     }
 
@@ -18,6 +20,7 @@ public class door00 : MonoBehaviour
 
         if (obj0 == null && obj01 == null && obj02 == null)
         {
+            healthSlider.gameObject.SetActive(true); // to show the slider
             Destroy(gameObject);
         }
     }

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class HPPlayer : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    private float currentHealth;
     public int hp1 = 0;
     public int hp2 = 0;
     public int hp3 = 0;
     public int hp4 = 0;
     public Slider healthSlider;
-
+    public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
     private void Start()
     {
         currentHealth = maxHealth-10;
@@ -20,6 +20,26 @@ public class HPPlayer : MonoBehaviour
 
     private void Update()
     {
+
+
+
+
+
+
+        /*******************************************************************************/
+        // Check if an enemy is close and decrease health by 10 if there is
+        Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDetectionRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("Enemylevel0"))
+            {
+                currentHealth -= 0.1f;
+                healthSlider.value = currentHealth;
+                break;
+            }
+
+        }
+        /*******************************************************************************/
         if (Input.GetKeyDown(KeyCode.U))
         {
             DecreaseHealth(10);
@@ -29,9 +49,10 @@ public class HPPlayer : MonoBehaviour
         {
 
 
-        
-              if (transform.position.x >= -60 && transform.position.x <= -58)
-              {
+            UnityEngine.Debug.Log("Player x position: " + transform.position.x);
+            UnityEngine.Debug.Log("Player z position: " + transform.position.z);
+            if (transform.position.x >= -111 && transform.position.x <= -110)
+            { 
                   if (transform.position.y >= 0 && transform.position.y <= 2)
                   {
                       if (transform.position.z >= 0 && transform.position.z <= 2)
@@ -49,8 +70,7 @@ public class HPPlayer : MonoBehaviour
                   }
               }
         }
-        UnityEngine.Debug.Log("Player x position: " + transform.position.x);
-        UnityEngine.Debug.Log("Player z position: " + transform.position.z);
+
         if (hp2 == 0)
         {
           
