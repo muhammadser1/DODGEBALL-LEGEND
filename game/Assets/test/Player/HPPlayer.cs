@@ -10,6 +10,7 @@ public class HPPlayer : MonoBehaviour
     public int hp2 = 0;
     public int hp3 = 0;
     public int hp4 = 0;
+    public int hp5 = 0;
     public Slider healthSlider;
     public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
     private void Start()
@@ -44,13 +45,31 @@ public class HPPlayer : MonoBehaviour
         {
             DecreaseHealth(10);
         }
+        if (hp5 == 0)
+        {
 
+            if (transform.position.x >= -67 && transform.position.x <= -66)
+            {
+                if (transform.position.y >= 0 && transform.position.y <= 2)
+                {
+                    if (transform.position.z >= 2 && transform.position.z <= 4)
+                    {
+                        currentHealth = 100;
+                        UpdateHealthSlider();
+                        hp5++;
+                        GameObject obj = GameObject.Find("Bottle_Endurance");
+
+                        if (obj != null)
+                        {
+                            Destroy(obj);
+                        }
+                    }
+                }
+            }
+        }
         if (hp1 == 0)
         {
 
-
-            UnityEngine.Debug.Log("Player x position: " + transform.position.x);
-            UnityEngine.Debug.Log("Player z position: " + transform.position.z);
             if (transform.position.x >= -111 && transform.position.x <= -110)
             { 
                   if (transform.position.y >= 0 && transform.position.y <= 2)
@@ -70,11 +89,12 @@ public class HPPlayer : MonoBehaviour
                   }
               }
         }
-
+        UnityEngine.Debug.Log("Player x position: " + transform.position.x);
+        UnityEngine.Debug.Log("Player z position: " + transform.position.z);
         if (hp2 == 0)
         {
           
-            //UnityEngine.Debug.Log("Player x position: " + transform.position.x);
+            UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
             if (transform.position.x >= 28f && transform.position.x <= 28.5f)
