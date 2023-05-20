@@ -43,7 +43,7 @@ public class HPPlayer : MonoBehaviour
                           currentHealth += 10;
                           UpdateHealthSlider();
                           hp1++;
-                          GameObject obj = GameObject.Find("Cube (6)1");
+                          GameObject obj = GameObject.Find("Bottle_Health");
 
                           if (obj != null)
                           {

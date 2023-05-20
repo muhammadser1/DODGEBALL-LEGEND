@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class CameraMove : MonoBehaviour
 {
-    private const float moveSpeed = 7.5f;
-    private const float cameraSpeed = 3.0f;
+    private const float moveSpeed = 4f;
+    private const float cameraSpeed = 1f;
 
     public Quaternion TargetRotation { private set; get; }
 
@@ -24,6 +24,12 @@ public class CameraMove : MonoBehaviour
     }
     private void Update()
     {
+        if (transform.position.y >= 1)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.y = 1;
+            transform.position = newPosition;
+        }
         // Rotate the camera.
         var rotation = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
         var targetEuler = TargetRotation.eulerAngles + (Vector3)rotation * cameraSpeed;
