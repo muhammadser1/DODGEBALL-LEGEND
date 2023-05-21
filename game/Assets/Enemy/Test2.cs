@@ -45,7 +45,7 @@ public class Test2 : MonoBehaviour
                 Rigidbody rigidbody = GetComponent<Rigidbody>();
                 if (rigidbody != null)
                 {
-                    rigidbody.velocity = direction * 5f;
+                    rigidbody.velocity = direction * 10;
                 }
             }
         }

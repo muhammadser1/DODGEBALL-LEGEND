@@ -6,11 +6,12 @@ public class HPPlayer : MonoBehaviour
 {
     public int maxHealth = 100;
     private float currentHealth;
-    public int hp1 = 0;
-    public int hp2 = 0;
-    public int hp3 = 0;
-    public int hp4 = 0;
-    public int hp5 = 0;
+     int hp1 = 0;
+     int hp2 = 0;
+     int hp3 = 0;
+     int hp4 = 0;
+     int hp5 = 0;
+    int  hp6 = 0;
     public Slider healthSlider;
     public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
     private void Start()
@@ -34,7 +35,7 @@ public class HPPlayer : MonoBehaviour
         {
             if (collider.CompareTag("Enemylevel0"))
             {
-                currentHealth -= 0.1f;
+                currentHealth -= 0.05f;
                 healthSlider.value = currentHealth;
                 break;
             }
@@ -149,7 +150,7 @@ public class HPPlayer : MonoBehaviour
             //UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
-            if (transform.position.x >= 30 && transform.position.x <= 31)
+            if (transform.position.x >= -9 && transform.position.x <= -8)
             {
 
                 if (transform.position.y >= 0 && transform.position.y <= 2)
@@ -169,7 +170,27 @@ public class HPPlayer : MonoBehaviour
                 }
             }
         }
+        if (hp6 == 0)
+        {
+            if (transform.position.x >= -9.2 && transform.position.x <= -8.7)
+            {
+                if (transform.position.y >= 0 && transform.position.y <= 2)
+                {
+                    if (transform.position.z >= 26 && transform.position.z <= 27)
+                    {
+                        currentHealth = 100;
+                        UpdateHealthSlider();
+                        hp6++;
+                        GameObject obj = GameObject.Find("Bottle_Endurance (1)");
 
+                        if (obj != null)
+                        {
+                            Destroy(obj);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private void DecreaseHealth(int amount)

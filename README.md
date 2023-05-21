@@ -62,8 +62,8 @@ https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary
 3. Make the enemy's ball follow the player: 2 hours.
 4. Make the targets in room 0 move left and right: 1 hours.
 5. Create a new, larger room 2 with additional obstacles: 3 hours.
-6. Adding a healing zone 0.5 hours.
-Total hours: 8.5
+6. Adding a healing zone 1 hours.
+Total hours: 9
 
 ## Room 0 (After Week 7):
 
@@ -77,7 +77,7 @@ Total hours: 8.5
 ## Week 8 :
 This week, I added an instructions menu and updated the code so that the player can only pick up one ball at a time. I also added some new balls and three enemies to Room 2. Additionally, I created videos of my game. Finally, I finished developing my game, although it does not include portals.
 
-Total Hours: 6.5
+Total Hours: 9
 
 ## First Try
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%208%20(finish%20game%20without%20Portals)/11.gif)
