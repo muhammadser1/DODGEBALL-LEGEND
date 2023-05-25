@@ -113,3 +113,21 @@ Total Hours: 9
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%2010(2).gif)
 
 ## Week 12:
+1. Import the health items from Unity Assets and place four of them in my game. Implement a mechanic where the player can pick up the health items to increase their health by 10. Finally, finalize the practice room to complete it officially. (2 hours)
+
+2. Finish room 1 (2 hours)
+
+3. Learn how to create a minimap and start implementing it. (1 hour)
+
+4. Make the enemies grounded instead of flying. (0.5 hours)
+
+5. Implement a health bar system above the enemies. (0.5 hours)
+
+6. Tag the walls and create portals only on the green walls. (1 hour)
+
+7. Implement health pickups, enemies, more balls, and enemies with health. (3 hours)
+
+8. Fix parameters and fine-tune the gameplay. (0.5 hours)
+9. Remaining enemies.(1 hour)
+
+Total Hours: 11.5
