@@ -39,7 +39,30 @@ public class HPPlayer : MonoBehaviour
                 healthSlider.value = currentHealth;
                 break;
             }
-
+            if (collider.CompareTag("Enemylevel0 (1)"))
+            {
+                currentHealth -= 0.05f;
+                healthSlider.value = currentHealth;
+                break;
+            }
+            if (collider.CompareTag("chaseandmoveenemy"))
+            {
+                currentHealth -= 0.5f;
+                healthSlider.value = currentHealth;
+                break;
+            }
+            if (collider.CompareTag("e1"))
+            {
+                currentHealth -= 0.5f;
+                healthSlider.value = currentHealth;
+                break;
+            }
+            if (collider.CompareTag("E1"))
+            {
+                currentHealth -= 0.5f;
+                healthSlider.value = currentHealth;
+                break;
+            }
         }
         /*******************************************************************************/
         if (Input.GetKeyDown(KeyCode.U))
@@ -90,8 +113,8 @@ public class HPPlayer : MonoBehaviour
                   }
               }
         }
-        UnityEngine.Debug.Log("Player x position: " + transform.position.x);
-        UnityEngine.Debug.Log("Player z position: " + transform.position.z);
+       // UnityEngine.Debug.Log("Player x position: " + transform.position.x);
+     //   UnityEngine.Debug.Log("Player z position: " + transform.position.z);
         if (hp2 == 0)
         {
           

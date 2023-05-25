@@ -3,7 +3,7 @@ using UnityEngine;
 public class chasing : MonoBehaviour
 {
     public float speed = 5f;
-    public float detectionRadius = 5f;
+    public float detectionRadius = 10f;
     private Transform playerTransform;
     private Rigidbody rb;
 

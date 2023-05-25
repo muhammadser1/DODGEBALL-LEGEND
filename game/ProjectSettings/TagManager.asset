@@ -19,6 +19,10 @@ TagManager:
   - enemyball22
   - Portal
   - Bottle_Health (1)
+  - Enemylevel0 (1)
+  - chaseandmoveenemy
+  - E1
+  - e1
   layers:
   - Default
   - TransparentFX

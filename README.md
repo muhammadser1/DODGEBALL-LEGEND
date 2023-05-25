@@ -19,7 +19,11 @@ Total hours: 8.5
 ![Week 2](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week2.gif)
 
 
-## Week 3:
+## week 3:
+
+In week 3, the lecture gave me a two-week deadline to implement the portals and check if I can accomplish it or not.  7 hours.
+
+## Week 4:
 1.	Fix the bug where the enemy falls down by implementing a solution that keeps the enemy standing at all times.
 2.	Add a health bar to both the enemy and player characters.
 3.	When the ball hits the player or enemy, decrease the health points by 10.
@@ -28,10 +32,10 @@ Total hours: 8.5
 Total hours: 11.5
 ![Week 3](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week3.gif)
 
-## week 4:
+## week 5:
 Unable to make any progress due to other commitments.
 
-## Week 5:
+## Week 6:
 
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/BUG.png)
 
@@ -43,7 +47,7 @@ Total hours: 8.5
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%205.gif)
 
 
-## Week 6:
+## Week 7:
 1. Create more rooms.
 2. Create a practice room with three targets that the player must hit with balls to progress to room 2.
 3. Add two different types of balls, each with unique properties.
@@ -56,7 +60,7 @@ Total hour: 7.5
 https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/week%201-6%20(summary).mp4                                                                      
 
 
-## Week 7:
+## Week 8:
 1. Make one enemy that throws a ball: 1.5 hours.
 2. Update the bug related to the healthy bar: 0.5 hours.
 3. Make the enemy's ball follow the player: 2 hours.
@@ -74,7 +78,7 @@ Total hours: 9
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%207(Making%20the%20enemy%20throw%20balls)/Rooms/Room_1.gif)
 
 
-## Week 8 :
+## Week 9 :
 This week, I added an instructions menu and updated the code so that the player can only pick up one ball at a time. I also added some new balls and three enemies to Room 2. Additionally, I created videos of my game. Finally, I finished developing my game, although it does not include portals.
 
 Total Hours: 9
@@ -86,12 +90,12 @@ Total Hours: 9
 
 ![](https://github.com/muhammadser1/DODGEBALL-LEGEND/blob/main/Week%208%20(finish%20game%20without%20Portals)/22.gif)
 
-## Week 9:
+## Week 10:
 
 I learned from YouTube and Google tutorials for a total of 7 hours. Additionally, I spent 0.5 hours learning ProBuilder as it makes map creation easier.
 Total Hours: 7.5
 
-## Week 10:
+## Week 11:
 
 1. Make two boxes and place them on the wall by clicking the right and left mouse buttons. The boxes should be positioned very close to the wall, almost touching it. (2 hour)
 

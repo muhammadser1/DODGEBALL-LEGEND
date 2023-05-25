@@ -7,11 +7,13 @@ public class CameraMove : MonoBehaviour
 {
     private const float moveSpeed = 4f;
     private const float cameraSpeed = 1f;
+    private const float dashMultiplier = 2f; // Multiplier for dashing speed
 
     public Quaternion TargetRotation { private set; get; }
 
     private Vector3 moveVector = Vector3.zero;
     private float moveY = 0.0f;
+    private bool isDashing = false; // Flag to check if dashing
 
     private new Rigidbody rigidbody;
 
@@ -22,12 +24,13 @@ public class CameraMove : MonoBehaviour
 
         TargetRotation = transform.rotation;
     }
+
     private void Update()
     {
-        if (transform.position.y !=1)
+        if (transform.position.y != 1)
         {
             Vector3 newPosition = transform.position;
-            newPosition.y =1;
+            newPosition.y = 1;
             transform.position = newPosition;
         }
 
@@ -63,13 +66,35 @@ public class CameraMove : MonoBehaviour
             // Move the camera upwards when space bar is pressed.
             moveY = Input.GetKey(KeyCode.Space) ? moveSpeed : 0.0f;
         }
+
+        // Check if dash key is pressed
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isDashing = true;
+            StartCoroutine(StopDash()); // Start coroutine to stop dashing after a certain duration
+        }
     }
 
     private void FixedUpdate()
     {
         Vector3 newVelocity = transform.TransformDirection(moveVector);
         newVelocity.y += moveY;
+
+        // Apply dash multiplier if dashing
+        if (isDashing)
+        {
+            newVelocity *= dashMultiplier;
+        }
+
         rigidbody.velocity = newVelocity;
+    }
+
+    private IEnumerator StopDash()
+    {
+        yield return new WaitForSeconds(0.5f); // Change the duration of the dash as desired
+
+        // Stop dashing after the specified duration
+        isDashing = false;
     }
 
     public void ResetTargetRotation()
