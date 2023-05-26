@@ -23,6 +23,8 @@ TagManager:
   - chaseandmoveenemy
   - E1
   - e1
+  - turret_mount1
+  - t1
   layers:
   - Default
   - TransparentFX

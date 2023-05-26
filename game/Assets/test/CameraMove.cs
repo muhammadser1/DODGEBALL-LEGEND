@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class CameraMove : MonoBehaviour
 {
+    public GameObject box;
+    public GameObject box2;
     private const float moveSpeed = 4f;
     private const float cameraSpeed = 1f;
     private const float dashMultiplier = 2f; // Multiplier for dashing speed
@@ -33,7 +35,16 @@ public class CameraMove : MonoBehaviour
             newPosition.y = 1;
             transform.position = newPosition;
         }
+        if (transform.position.x >= -85)
+        {
+            box.SetActive(true);
+        }
+        GameObject obj0 = GameObject.Find("door0 (1)");
 
+        if(obj0 ==null && transform.position.x >=-40)
+        {
+            box2.SetActive(true);
+        }
         // Rotate the camera.
         var rotation = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
         var targetEuler = TargetRotation.eulerAngles + (Vector3)rotation * cameraSpeed;

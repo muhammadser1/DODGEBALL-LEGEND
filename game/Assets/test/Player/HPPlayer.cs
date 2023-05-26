@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class HPPlayer : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -22,7 +22,13 @@ public class HPPlayer : MonoBehaviour
 
     private void Update()
     {
+        if (healthSlider.value <= 0)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("Menu 1");
 
+        }
 
 
 
@@ -60,6 +66,12 @@ public class HPPlayer : MonoBehaviour
             if (collider.CompareTag("E1"))
             {
                 currentHealth -= 0.5f;
+                healthSlider.value = currentHealth;
+                break;
+            }
+            if (collider.CompareTag("t1"))
+            {
+                currentHealth -= 0.25f;
                 healthSlider.value = currentHealth;
                 break;
             }
@@ -229,5 +241,6 @@ public class HPPlayer : MonoBehaviour
         {
             healthSlider.value = currentHealth;
         }
+        
     }
 }
