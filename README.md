@@ -131,3 +131,11 @@ Total Hours: 9
 9. Remaining enemies.(1 hour)
 
 Total Hours: 11.5
+
+## Week 13:
+1. import towers and throwing balls (1.5)     
+2. update menu   (1)
+3. win + lose (1)    
+4. learn animation (3)
+
+Total Hours: 6.5
