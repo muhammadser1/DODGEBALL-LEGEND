@@ -366,6 +366,7 @@
 "Assets/Player/BallPickup.cs"
 "Assets/Player/BallPickup01.cs"
 "Assets/Player/oneball.cs"
+"Assets/Player/pause.cs"
 "Assets/Player/PlayerController.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Player/PlayerMovement.cs"
