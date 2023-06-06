@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638212431995476155
+      ticks: 638215865278595282
     m_Hash: 3737259347
   m_LockFileStatus:
     m_FilePath: C:/Users/Mohammad/Desktop/s/DODGEBALL-LEGEND/game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638212431995476155
+      ticks: 638215865278595282
     m_Hash: 3825419817
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -997,6 +997,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.8.3
     compatible:
     - 1.6.4
     - 1.6.5
@@ -1010,6 +1011,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.8.3
     verified: 1.6.5
   dependencies:
   - name: com.unity.modules.director

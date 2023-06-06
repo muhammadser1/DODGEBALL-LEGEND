@@ -29,7 +29,11 @@ public class HPPlayer : MonoBehaviour
             SceneManager.LoadScene("Menu 1");
 
         }
-
+        if (transform.position.y < -0.6f)
+        {
+            currentHealth -= 0.1f;
+            healthSlider.value = currentHealth;
+        }
 
 
 
@@ -130,6 +134,8 @@ public class HPPlayer : MonoBehaviour
         if (hp2 == 0)
         {
           
+            UnityEngine.Debug.Log("Player y position: " + transform.position.y);
+            UnityEngine.Debug.Log("Player z position: " + transform.position.z);
             UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
