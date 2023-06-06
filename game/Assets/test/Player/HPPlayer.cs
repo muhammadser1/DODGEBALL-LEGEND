@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class HPPlayer : MonoBehaviour
 {
+    int laser1 = 0;
     public int maxHealth = 100;
     private float currentHealth;
      int hp1 = 0;
@@ -37,12 +38,18 @@ public class HPPlayer : MonoBehaviour
 
 
 
-
+       
         /*******************************************************************************/
         // Check if an enemy is close and decrease health by 10 if there is
         Collider[] colliders = Physics.OverlapSphere(transform.position, enemyDetectionRadius);
         foreach (Collider collider in colliders)
         {
+            if (collider.CompareTag("lineRenderer"))
+            {
+                currentHealth -= 100f;
+                healthSlider.value = currentHealth;
+                break;
+            }
             if (collider.CompareTag("Enemylevel0"))
             {
                 currentHealth -= 0.05f;
@@ -80,7 +87,17 @@ public class HPPlayer : MonoBehaviour
                 break;
             }
         }
+
         /*******************************************************************************/
+        if(transform.position.z >= 69.5f && transform.position.z <= 71)
+        {
+            if(laser1 ==0)
+            {
+                currentHealth -= 30f;
+                healthSlider.value = currentHealth;
+
+            }
+        }
         if (Input.GetKeyDown(KeyCode.U))
         {
             DecreaseHealth(10);

@@ -36,7 +36,13 @@ public class CameraMove : MonoBehaviour
             newPosition.y = 1;
             transform.position = newPosition;
         }
-        if (transform.position.z > 30 && transform.position.z<58)
+        if (transform.position.z >= 59)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.y = 1;
+            transform.position = newPosition;
+        }
+        if (transform.position.z > 30 && transform.position.z<57)
         {
             if (transform.position.y >= -0.7f)
             {
