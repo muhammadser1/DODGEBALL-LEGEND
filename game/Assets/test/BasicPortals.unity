@@ -4124,7 +4124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3253401affdb5544c947f60fa17aaca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  f: 0
+  laser12: 0
 --- !u!43 &224619281
 Mesh:
   m_ObjectHideFlags: 0
@@ -37033,6 +37033,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869327201008158686, guid: 09a391e652641814aa700d3d3c095ceb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869327201008158686, guid: 09a391e652641814aa700d3d3c095ceb, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -37176,8 +37180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d276ca86b99ee5419c92c9858a92a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser1: 0
-  laser2: 0
   maxHealth: 100
   healthSlider: {fileID: 1766610189}
   enemyDetectionRadius: 3

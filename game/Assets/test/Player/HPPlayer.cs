@@ -4,10 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class HPPlayer : MonoBehaviour
 {
-    public int laser1 = 0;
-    public int laser2 = 0;
+
     public int maxHealth = 100;
-    private ll script2; // Changed to private field
     private float currentHealth;
      int hp1 = 0;
      int hp2 = 0;
@@ -25,7 +23,8 @@ public class HPPlayer : MonoBehaviour
 
     private void Update()
     {
-        script2 = GetComponent<ll>();
+        GameObject obj1 = GameObject.Find("Laser_Red (2)");
+
         if (healthSlider.value <= 0)
         {
             Cursor.visible = true;
@@ -96,28 +95,20 @@ public class HPPlayer : MonoBehaviour
 
         if (transform.position.z >= 69.5f && transform.position.z <= 71)
         {
-            if (script2 != null)
+            if (obj1 != null)
             {
-                if (script2.laser12 == 0)
-                {
                     currentHealth -= 30f;
                     healthSlider.value = currentHealth;
-
-                }
             }
         }
         if (transform.position.z >= 73 && transform.position.z <= 74)
         {
             if (transform.position.x >= -177 && transform.position.x <= -175)
             {
-                if (script2 != null)
+                if (obj1 != null)
                 {
-                    if (script2.laser12 == 0)
-                    {
-                        currentHealth -= 30f;
-                        healthSlider.value = currentHealth;
-
-                    }
+                    currentHealth -= 30f;
+                    healthSlider.value = currentHealth;
                 }
             }
         }

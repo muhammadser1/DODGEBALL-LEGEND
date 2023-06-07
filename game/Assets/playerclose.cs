@@ -8,12 +8,10 @@ public class playerclose : MonoBehaviour
     public GameObject targetObject;
     public float detectionRadius = 2f;
     private ll script2; // Changed to private field
-    private HPPlayer script1; // Changed to private field
     private void Start()
     {
         text.SetActive(false);
         script2  = GetComponent<ll>();
-        script1 = GetComponent<HPPlayer>();
 
     }
 
@@ -59,11 +57,7 @@ public class playerclose : MonoBehaviour
                 {
                     script2.laser12 = 1;               
                 }
-                if (script1 != null)
-                {
-                    script1.laser2 = 1;
-                    script1.laser1 = 1;
-                }
+                
             }
         }
         else
