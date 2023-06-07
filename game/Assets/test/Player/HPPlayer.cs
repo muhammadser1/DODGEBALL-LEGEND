@@ -4,8 +4,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class HPPlayer : MonoBehaviour
 {
-    int laser1 = 0;
+    public int laser1 = 0;
+    public int laser2 = 0;
     public int maxHealth = 100;
+    private ll script2; // Changed to private field
     private float currentHealth;
      int hp1 = 0;
      int hp2 = 0;
@@ -23,6 +25,7 @@ public class HPPlayer : MonoBehaviour
 
     private void Update()
     {
+        script2 = GetComponent<ll>();
         if (healthSlider.value <= 0)
         {
             Cursor.visible = true;
@@ -89,13 +92,33 @@ public class HPPlayer : MonoBehaviour
         }
 
         /*******************************************************************************/
-        if(transform.position.z >= 69.5f && transform.position.z <= 71)
-        {
-            if(laser1 ==0)
-            {
-                currentHealth -= 30f;
-                healthSlider.value = currentHealth;
 
+
+        if (transform.position.z >= 69.5f && transform.position.z <= 71)
+        {
+            if (script2 != null)
+            {
+                if (script2.laser12 == 0)
+                {
+                    currentHealth -= 30f;
+                    healthSlider.value = currentHealth;
+
+                }
+            }
+        }
+        if (transform.position.z >= 73 && transform.position.z <= 74)
+        {
+            if (transform.position.x >= -177 && transform.position.x <= -175)
+            {
+                if (script2 != null)
+                {
+                    if (script2.laser12 == 0)
+                    {
+                        currentHealth -= 30f;
+                        healthSlider.value = currentHealth;
+
+                    }
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.U))
@@ -151,9 +174,9 @@ public class HPPlayer : MonoBehaviour
         if (hp2 == 0)
         {
           
-            UnityEngine.Debug.Log("Player y position: " + transform.position.y);
+          /*  UnityEngine.Debug.Log("Player y position: " + transform.position.y);
             UnityEngine.Debug.Log("Player z position: " + transform.position.z);
-            UnityEngine.Debug.Log("Player x position: " + transform.position.x);
+            UnityEngine.Debug.Log("Player x position: " + transform.position.x);*/
 
 
             if (transform.position.x >= 28f && transform.position.x <= 28.5f)
