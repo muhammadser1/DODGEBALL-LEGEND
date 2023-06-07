@@ -139,3 +139,16 @@ Total Hours: 11.5
 4. learn animation (3)
 
 Total Hours: 6.5
+
+## Week 14:
+1. pause +resume     (0.5)
+
+#### The lecturer needs to utilize more portals, which requires me to adjust the map accordingly.
+
+2. Two rooms were created. In the first room, the player must use a portal to collect the balls and defeat the enemy. Once accomplished, the door will open. In the second room, there is a water pool that gradually decreases the player's health. To proceed to room 3, the player must utilize portals.(4)
+
+3. finish laser (1.5)
+4. Fix the bug in the laser.(0.5)
+
+### Unresolved Bug:
+##### The player can enter walls due to collider issues.
