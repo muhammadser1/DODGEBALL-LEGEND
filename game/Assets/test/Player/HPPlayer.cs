@@ -165,9 +165,9 @@ public class HPPlayer : MonoBehaviour
         if (hp2 == 0)
         {
           
-          /*  UnityEngine.Debug.Log("Player y position: " + transform.position.y);
+           UnityEngine.Debug.Log("Player y position: " + transform.position.y);
             UnityEngine.Debug.Log("Player z position: " + transform.position.z);
-            UnityEngine.Debug.Log("Player x position: " + transform.position.x);*/
+            UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
             if (transform.position.x >= 28f && transform.position.x <= 28.5f)

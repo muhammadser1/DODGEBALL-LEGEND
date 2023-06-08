@@ -29,8 +29,19 @@ public class CameraMove : MonoBehaviour
 
     private void Update()
     {
-
-        if (transform.position.z <= 30)
+        if (transform.position.z >= -43.2 && transform.position.z <= -20)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.y = 5;
+            transform.position = newPosition;
+        }
+        if (transform.position.z <= -43.5)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.y = 1;
+            transform.position = newPosition;
+        }
+        if (transform.position.z <= 30 && transform.position.z >= 10)
         {
             Vector3 newPosition = transform.position;
             newPosition.y = 1;
@@ -51,7 +62,7 @@ public class CameraMove : MonoBehaviour
                 transform.position = newPosition;
             }
         }
-        if (transform.position.y >= 1)
+        if (transform.position.y >= 1 && transform.position.z>10)
         {
             Vector3 newPosition = transform.position;
             newPosition.y = 1;
