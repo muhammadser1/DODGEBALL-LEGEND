@@ -26,6 +26,7 @@ TagManager:
   - turret_mount1
   - t1
   - lineRenderer
+  - EE1
   layers:
   - Default
   - TransparentFX

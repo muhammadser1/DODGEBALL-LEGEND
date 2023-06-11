@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class sphereclose : MonoBehaviour
 {
-    public string sphere4Name = "Sphere (4)"; // The name of the Sphere (4) GameObject
+  /*  public string sphere4Name = "Sphere (4)"; // The name of the Sphere (4) GameObject
     public Material greenMaterial; // Reference to the green material for the box
 
     private Material originalMaterial; // Reference to the original material of the box
@@ -13,10 +13,10 @@ public class sphereclose : MonoBehaviour
     private GameObject sphere4; // Reference to the Sphere (4) GameObject
 
     private float detectionRadius = 5f; // The radius within which the Sphere (4) is considered close
-
+  */
     void Start()
     {
-        // Get the renderer component of the box
+     /*   // Get the renderer component of the box
         boxRenderer = GetComponent<Renderer>();
 
         // Store the original material of the box
@@ -28,12 +28,11 @@ public class sphereclose : MonoBehaviour
         if (sphere4 == null)
         {
             
-        }
+        }*/
     }
 
     void Update()
-    {
-        GameObject obj0 = GameObject.Find("Cube (34)");
+    {/*   GameObject obj0 = GameObject.Find("Cube (34)");
         GameObject obj1 = GameObject.Find("Cube (35)");
         GameObject obj2 = GameObject.Find("Cube (36)");
         GameObject obj3 = GameObject.Find("Cube (37)");
@@ -69,6 +68,6 @@ public class sphereclose : MonoBehaviour
                 }
             }
            
-        }
+        }*/
     }
 }

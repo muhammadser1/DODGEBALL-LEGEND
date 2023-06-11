@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class playerclose : MonoBehaviour
 {
-    public GameObject text;
+   /* public GameObject text;
     public GameObject targetObject;
     public float detectionRadius = 2f;
     private ll script2; // Changed to private field
+   */
     private void Start()
     {
-        text.SetActive(false);
-        script2  = GetComponent<ll>();
+      //  text.SetActive(false);
+      //  script2  = GetComponent<ll>();
 
     }
 
     private void Update()
     {
-        GameObject obj1 = GameObject.Find("Laser_Red (2)");
+       /* GameObject obj1 = GameObject.Find("Laser_Red (2)");
         GameObject obj2 = GameObject.Find("Laser_Red (3)");
         GameObject obj3 = GameObject.Find("Laser_Red (4)");
         GameObject obj4 = GameObject.Find("Laser_Red (5)");
@@ -64,6 +65,6 @@ public class playerclose : MonoBehaviour
         {
             if (text != null)
                 text.SetActive(false);
-        }
+        }  */
     }
 }

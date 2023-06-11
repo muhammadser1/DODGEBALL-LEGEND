@@ -13,11 +13,11 @@ public class sphere4movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y != 5)
+    /*    if (transform.position.y != 5)
         {
             Vector3 newPosition = transform.position;
             newPosition.y = 5;
             transform.position = newPosition;
-        }
+        }*/
     }
 }

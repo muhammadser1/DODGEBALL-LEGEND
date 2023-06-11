@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class door00 : MonoBehaviour
 {
-    public Slider healthSlider;
-    public Slider healthSlider2;
+  //  public Slider healthSlider;
+  //  public Slider healthSlider2;
     void Start()
     {
-        healthSlider.gameObject.SetActive(false); // to show the slider
-        healthSlider2.gameObject.SetActive(false); // to show the slider
+       // healthSlider.gameObject.SetActive(false); // to show the slider
+        //healthSlider2.gameObject.SetActive(false); // to show the slider
 
     }
 
     void Update()
     {
-        GameObject obj0 = GameObject.Find("test1");
+      /*  GameObject obj0 = GameObject.Find("test1");
         GameObject obj01 = GameObject.Find("test2");
         GameObject obj02 = GameObject.Find("test3");
 
@@ -26,6 +26,6 @@ public class door00 : MonoBehaviour
             healthSlider2.gameObject.SetActive(true); // to show the slider
 
             Destroy(gameObject);
-        }
+        }*/
     }
 }

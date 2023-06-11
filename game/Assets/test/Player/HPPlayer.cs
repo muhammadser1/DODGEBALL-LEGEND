@@ -72,13 +72,13 @@ public class HPPlayer : MonoBehaviour
             }
             if (collider.CompareTag("e1"))
             {
-                currentHealth -= 0.5f;
+                currentHealth -= 0.05f;
                 healthSlider.value = currentHealth;
                 break;
             }
-            if (collider.CompareTag("E1"))
+            if (collider.CompareTag("EE1"))
             {
-                currentHealth -= 0.5f;
+                currentHealth -= 0.05f;
                 healthSlider.value = currentHealth;
                 break;
             }

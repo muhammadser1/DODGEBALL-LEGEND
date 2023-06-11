@@ -12,13 +12,13 @@ public class counter : MonoBehaviour
     int flag6 = 0;
     int flag7 = 0;
     int flag8 = 0;
-
+    int flag9 = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        remainingPlayers = 8;
+        remainingPlayers = 9;
 
         // Get the Text component attached to this GameObject
         UnityEngine.UI.Text textComponent = GetComponent<UnityEngine.UI.Text>();
@@ -38,14 +38,15 @@ public class counter : MonoBehaviour
             SceneManager.LoadScene("Menu 2");
 
         }
-        GameObject obj1 = GameObject.Find("Enemylevel0 (1)");
-        GameObject obj2 = GameObject.Find("Enemylevel0");
+        GameObject obj1 = GameObject.Find("Enemylevel0 (4)");
+        GameObject obj2 = GameObject.Find("Enemylevel0 (9)");
         GameObject obj3 = GameObject.Find("Enemylevel0 (6)");
-        GameObject obj4 = GameObject.Find("E1");
+        GameObject obj4 = GameObject.Find("EE1");
         GameObject obj5 = GameObject.Find("tower_defence");
-        GameObject obj6 = GameObject.Find("Enemylevel0 (2)");
-        GameObject obj7 = GameObject.Find("Enemylevel0 (4)");
-        GameObject obj8 = GameObject.Find("Enemylevel0 (3)");
+        GameObject obj6 = GameObject.Find("EE2");
+        GameObject obj7 = GameObject.Find("EE3");
+        GameObject obj8 = GameObject.Find("Enemylevel0 (8)");
+        GameObject obj9 = GameObject.Find("Enemylevel0 (10)");
         UnityEngine.UI.Text textComponent = GetComponent<UnityEngine.UI.Text>();
 
         
@@ -94,6 +95,12 @@ public class counter : MonoBehaviour
         if (obj8 == null && flag8 == 0)
         {
             flag8 = 1;
+            remainingPlayers--;
+            UpdateRemainingPlayersText(textComponent);
+        }
+        if (obj9 == null && flag9 == 0)
+        {
+            flag9 = 1;
             remainingPlayers--;
             UpdateRemainingPlayersText(textComponent);
         }

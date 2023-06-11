@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class purpleenemyhp : MonoBehaviour
 {
+    /*
     public int maxHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
@@ -39,5 +40,5 @@ public class purpleenemyhp : MonoBehaviour
             healthSlider.value = currentHealth;
         }
 
-    }
+    }*/
 }

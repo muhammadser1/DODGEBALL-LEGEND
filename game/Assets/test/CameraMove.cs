@@ -5,17 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class CameraMove : MonoBehaviour
 {
-    public GameObject box;
-    public GameObject box2;
-    private const float moveSpeed = 4f;
-    private const float cameraSpeed = 1f;
-    private const float dashMultiplier = 2f; // Multiplier for dashing speed
+    private const float moveSpeed = 7.5f;
+    private const float cameraSpeed = 3.0f;
+    private const float gravity = 9.8f;
+    private const float jumpForce = 5.0f;
 
     public Quaternion TargetRotation { private set; get; }
 
     private Vector3 moveVector = Vector3.zero;
-    private float moveY = 0.0f;
-    private bool isDashing = false; // Flag to check if dashing
+    private bool isJumping = false;
 
     private new Rigidbody rigidbody;
 
@@ -29,55 +27,9 @@ public class CameraMove : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.z >= -43.2 && transform.position.z <= -20)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 5;
-            transform.position = newPosition;
-        }
-        if (transform.position.z <= -43.5)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 1;
-            transform.position = newPosition;
-        }
-        if (transform.position.z <= 30 && transform.position.z >= 10)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 1;
-            transform.position = newPosition;
-        }
-        if (transform.position.z >= 59)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 1;
-            transform.position = newPosition;
-        }
-        if (transform.position.z > 30 && transform.position.z<57)
-        {
-            if (transform.position.y >= -0.7f)
-            {
-                Vector3 newPosition = transform.position;
-                newPosition.y = -0.7f;
-                transform.position = newPosition;
-            }
-        }
-        if (transform.position.y >= 1 && transform.position.z>10)
-        {
-            Vector3 newPosition = transform.position;
-            newPosition.y = 1;
-            transform.position = newPosition;
-        }
-        if (transform.position.x >= -85)
-        {
-            box.SetActive(true);
-        }
-        GameObject obj0 = GameObject.Find("door0 (1)");
+        if (transform.position.y < 1)
+            transform.position = new Vector3(transform.position.x, 1, transform.position.z);
 
-        if(obj0 ==null && transform.position.x >=-40)
-        {
-            box2.SetActive(true);
-        }
         // Rotate the camera.
         var rotation = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
         var targetEuler = TargetRotation.eulerAngles + (Vector3)rotation * cameraSpeed;
@@ -96,49 +48,39 @@ public class CameraMove : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         moveVector = new Vector3(x, 0.0f, z) * moveSpeed;
 
-        // Check if jump key is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Jumping
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            // Apply an upward force to the rigidbody to simulate a jump
-            rigidbody.AddForce(transform.up * 10f, ForceMode.Impulse);
-
-            // Reset the moveY variable to prevent the camera from moving up
-            moveY = 0f;
-        }
-        else
-        {
-            // Move the camera upwards when space bar is pressed.
-            moveY = Input.GetKey(KeyCode.Space) ? moveSpeed : 0.0f;
-        }
-
-        // Check if dash key is pressed
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            isDashing = true;
-            StartCoroutine(StopDash()); // Start coroutine to stop dashing after a certain duration
+            isJumping = true;
+            Jump();
         }
     }
 
     private void FixedUpdate()
     {
         Vector3 newVelocity = transform.TransformDirection(moveVector);
-        newVelocity.y += moveY;
-
-        // Apply dash multiplier if dashing
-        if (isDashing)
-        {
-            newVelocity *= dashMultiplier;
-        }
-
+        newVelocity.y -= gravity;
         rigidbody.velocity = newVelocity;
     }
 
-    private IEnumerator StopDash()
+    private void Jump()
     {
-        yield return new WaitForSeconds(0.5f); // Change the duration of the dash as desired
+        if (isJumping)
+        {
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+            isJumping = false;
+        }
+    }
 
-        // Stop dashing after the specified duration
-        isDashing = false;
+    private bool IsGrounded()
+    {
+        RaycastHit hit;
+        float raycastDistance = 0.1f;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, raycastDistance))
+        {
+            return true;
+        }
+        return false;
     }
 
     public void ResetTargetRotation()
