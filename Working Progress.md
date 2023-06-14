@@ -148,4 +148,5 @@ Total Hours: 6.5
 5. Reorder the files (remove all the files, scripts, and scenes that I don't need) and create a new project that includes just the game I want.(1.5)
 6. Update the Menu (0.5)
 7.Reorder the position of the health item. (0.5)
-Total Hours: 7
+8. Update ReadMe (1)
+Total Hours: 8
