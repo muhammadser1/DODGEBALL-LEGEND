@@ -58,5 +58,5 @@ This game is released under the **MIT License**. Feel free to use, modify, and d
 
 ## Credits
 
-Game Developer: **Muhammad Sarahni**
-Lecturer: **Roi Poranne** - for providing guidance, support, and valuable feedback during the development of the game.
+- Game Developer: **Muhammad Sarahni**
+- Lecturer: **Roi Poranne** - for providing guidance, support, and valuable feedback during the development of the game.
