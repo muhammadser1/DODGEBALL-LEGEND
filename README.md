@@ -45,8 +45,6 @@ Dodgeball with Portals has been developed using the following technologies:
 
 ## Future Development
 
-We have exciting plans for the future development of Dodgeball with Portals. Some of the upcoming features and improvements we are considering include:
-
 - Multiplayer mode for competitive dodgeball matches.
 - Additional levels, enemies, and challenges.
 - Power-ups and special abilities for the player.
