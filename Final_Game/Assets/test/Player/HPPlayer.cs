@@ -17,7 +17,7 @@ public class HPPlayer : MonoBehaviour
     public float enemyDetectionRadius = 3f; // The radius around the player in which an enemy can be detected
     private void Start()
     {
-        currentHealth = maxHealth-10;
+        currentHealth = maxHealth;
         UpdateHealthSlider();
     }
 
@@ -112,10 +112,10 @@ public class HPPlayer : MonoBehaviour
                 }
             }
         }
-        /*if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             DecreaseHealth(10);
-        }*/
+        }
         if (hp5 == 0)
         {
 
@@ -196,12 +196,12 @@ public class HPPlayer : MonoBehaviour
             //UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
-            if (transform.position.x >= 36 && transform.position.x <= 36.5)
+            if (transform.position.x >= 3 && transform.position.x <= 4)
             {
 
-                if (transform.position.y >= 0 && transform.position.y <= 2)
+                if (transform.position.y >= 5 && transform.position.y <= 5.5)
                 {
-                    if (transform.position.z >= 37 && transform.position.z <= 38)
+                    if (transform.position.z >= 19 && transform.position.z <= 20)
                     {
                         currentHealth += 10;
                         UpdateHealthSlider();
@@ -222,12 +222,12 @@ public class HPPlayer : MonoBehaviour
             //UnityEngine.Debug.Log("Player x position: " + transform.position.x);
 
 
-            if (transform.position.x >= -9 && transform.position.x <= -8)
+            if (transform.position.x >= 33 && transform.position.x <= 34)
             {
 
                 if (transform.position.y >= 0 && transform.position.y <= 2)
                 {
-                    if (transform.position.z >= 44 && transform.position.z <= 45)
+                    if (transform.position.z >= 7 && transform.position.z <= 8)
                     {
                         currentHealth += 10;
                         UpdateHealthSlider();
