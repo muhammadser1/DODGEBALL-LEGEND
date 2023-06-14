@@ -41,7 +41,7 @@ Dodgeball with Portals has been developed using the following technologies:
 
 - **Unity**: The game engine used for creating the game's mechanics, physics, and overall gameplay experience.
 - **C#**: The programming language used for scripting and implementing the game's logic and functionality.
-- **Version Control (GitHub)**: Used to track and manage changes to the game's source code and collaborate with other developers.
+- **Version Control (GitHub)**: Used to track and manage changes to the game's source code.
 
 ## Future Development
 
