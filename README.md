@@ -142,3 +142,9 @@ Total Hours: 6.5
 
 ## Week 14:
 1. pause +resume     (0.5)
+2. Create a video scene and press the 'Esc' key to start. (1)
+3. Throw balls into portals, navigate through the room with ceiling portals and walls, and defeat enemies.(2)
+4. Import the tombstone asset and update it when an enemy dies. (1)
+5. Reorder the files (remove all the files, scripts, and scenes that I don't need) and create a new project that includes just the game I want.(1.5)
+6. Update the Menu (0.5)
+Total Hours: 6.5

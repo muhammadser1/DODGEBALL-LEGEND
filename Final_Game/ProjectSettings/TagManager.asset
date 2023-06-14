@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ball0
+  - Enemy
+  - Enemylevel0
+  - 19.62
+  - ball01
+  - ball02
+  - Ground
+  - Enemylevel2
+  - enemy1
+  - enemy2
+  - enemyball1
+  - enemy3
+  - enemyball22
+  - Portal
+  - Bottle_Health (1)
+  - Enemylevel0 (1)
+  - chaseandmoveenemy
+  - E1
+  - e1
+  - turret_mount1
+  - t1
+  - lineRenderer
+  - EE1
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - greenwall
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
